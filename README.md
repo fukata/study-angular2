@@ -12,3 +12,4 @@
 - [Services - ts - TUTORIAL](https://angular.io/docs/ts/latest/tutorial/toh-pt4.html)
 - [Routing & Navigation - ts - GUIDE](https://angular.io/docs/ts/latest/guide/router.html)
 - [HTTP - ts - TUTORIAL](https://angular.io/docs/ts/latest/tutorial/toh-pt6.html) 
+- 型定義ファイル: [DefinitelyTyped/DefinitelyTyped: The repository for high quality TypeScript type definitions.](https://github.com/DefinitelyTyped/DefinitelyTyped)
