@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   `
 })
 
-export class TodoShowComponent { }
+export class TodosShowComponent { }

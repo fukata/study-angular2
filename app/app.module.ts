@@ -6,14 +6,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './error.component';
 import { HomeComponent } from './home.component';
-import { TodoListComponent } from './todos/todos-list.component';
-import { TodoNewComponent } from './todos/todos-new.component';
-import { TodoShowComponent } from './todos/todos-show.component';
+
+import { TodosModule } from './todos/todos.module';
 
 const routes: Routes = [
-  { path: 'todos', component: TodoListComponent },
-  { path: 'todos/new', component: TodoNewComponent },
-  { path: 'todos/:id', component: TodoShowComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -22,13 +18,11 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    TodosModule,
     RouterModule.forRoot(routes, { useHash: true }),
   ],
   declarations: [
     AppComponent,
-    TodoListComponent,
-    TodoNewComponent,
-    TodoShowComponent,
     HomeComponent,
     PageNotFoundComponent,
   ],
