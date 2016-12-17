@@ -3,6 +3,8 @@
 *.swo
 node_modules
 
+*.log
+
 app/*.js
 app/*.js.map
 app/**/*.js

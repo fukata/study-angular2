@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <h1>{{title}}</h1>
     <nav>
       <a routerLink="/">Home</a>
-      <a routerLink="/memo">Memo</a>
+      <a routerLink="/todos">TODO</a>
     </nav>
     <router-outlet></router-outlet>
   ` 

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   template: `
-    <h2>Memo Show</h2>
+    <h2>TODO New</h2>
   `
 })
 
-export class MemoShowComponent { }
+export class TodoNewComponent { }

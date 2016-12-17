@@ -6,14 +6,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './error.component';
 import { HomeComponent } from './home.component';
-import { MemoListComponent } from './memo/list.component';
-import { MemoNewComponent } from './memo/new.component';
-import { MemoShowComponent } from './memo/show.component';
+import { TodoListComponent } from './todos/todos-list.component';
+import { TodoNewComponent } from './todos/todos-new.component';
+import { TodoShowComponent } from './todos/todos-show.component';
 
-const appRoutes: Routes = [
-  { path: 'memo', component: MemoListComponent },
-  { path: 'memo/new', component: MemoNewComponent },
-  { path: 'memo/:id', component: MemoShowComponent },
+const routes: Routes = [
+  { path: 'todos', component: TodoListComponent },
+  { path: 'todos/new', component: TodoNewComponent },
+  { path: 'todos/:id', component: TodoShowComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -22,13 +22,13 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { useHash: true }),
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
   declarations: [
     AppComponent,
-    MemoListComponent,
-    MemoNewComponent,
-    MemoShowComponent,
+    TodoListComponent,
+    TodoNewComponent,
+    TodoShowComponent,
     HomeComponent,
     PageNotFoundComponent,
   ],
