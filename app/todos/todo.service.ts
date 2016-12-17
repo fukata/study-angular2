@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 export class Todo {
-  constructor(public id: number, public title: string, public note: string) {}
+  constructor(public id: number, public title: string, public body: string) {}
 }
 
 let TODOS = [
@@ -19,5 +19,9 @@ export class TodoService {
 
   getTodo(id: number) {
     return todosPromise.then(todos => todos.find(todo => todo.id === id));
+  }
+
+  saveTodo(todo: Todo) {
+
   }
 }

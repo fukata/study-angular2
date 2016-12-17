@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import 'rxjs/add/operator/switchMap';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
+import { Todo, TodoService } from './todo.service';
 
 @Component({
   template: `
@@ -6,4 +10,20 @@ import { Component } from '@angular/core';
   `
 })
 
-export class TodosNewComponent { }
+export class TodosNewComponent implements OnInit {
+  todo: Todo;
+  
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: TodoService
+  ) {}
+
+  ngOnInit() {
+  }
+
+  submit() {
+    this.service.saveTodo(this.todo); //FIXME need wait
+    this.router.navigate(['/todos']);
+  }
+}
